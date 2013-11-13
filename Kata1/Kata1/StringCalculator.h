@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StringCalculator : NSObject
+@interface StringCalculator : NSObject{
+   NSNumberFormatter *formatter;
+}
 
 - (NSInteger)add:(NSString *)input;
 

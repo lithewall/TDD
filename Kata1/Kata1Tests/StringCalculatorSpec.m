@@ -54,6 +54,17 @@ describe(@"StringCalculator test", ^{
             // then
             [[theValue(val) should] equal:theValue(13)];
         });
+        
+        it(@"test voi string truyen vao khong la so", ^{
+            // given
+            string = @"5fs,as8";
+            
+            // when
+            NSInteger val =  [sut add:string];
+            
+            // then
+            [[theValue(val) should] equal:theValue(0)];
+        });
     });
         
 });
