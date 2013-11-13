@@ -1,0 +1,60 @@
+//
+//  StringCalculatorSpec.m
+//  Kata1
+//
+
+#import "Kiwi.h"
+#import "StringCalculator.h"
+
+SPEC_BEGIN(StringCalculatorSpec)
+describe(@"StringCalculator test", ^{
+    
+    __block StringCalculator *sut;
+    __block NSString *string;
+    
+    context(@"Tạo String calculator với một phương thức int add(string numbers)", ^{
+        
+        beforeAll(^{
+            sut = [[StringCalculator alloc] init];
+        });
+        
+        afterAll(^{
+            sut = nil;
+        });
+        
+        it(@"phuong thuc add tra ve gia tri = 0 neu string truyen vao la rong", ^{
+            // given
+            string = @"";
+            
+            // when
+            NSInteger val =  [sut add:string];
+            
+            // then
+            [[theValue(val) should] equal:theValue(0)];
+        });
+        
+        it(@"test voi string truyen vao la 1 so co 1 chu so", ^{
+            // given
+            string = @"5";
+            
+            // when
+            NSInteger val =  [sut add:string];
+            
+            // then
+            [[theValue(val) should] equal:theValue(5)];
+        });
+        
+        it(@"test voi string truyen vao la 1 so co 2 chu so", ^{
+            // given
+            string = @"58";
+            	
+            // when
+            NSInteger val =  [sut add:string];
+            
+            // then
+            [[theValue(val) should] equal:theValue(13)];
+        });
+    });
+        
+});
+SPEC_END
