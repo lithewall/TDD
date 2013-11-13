@@ -12,9 +12,19 @@
 
 - (NSInteger)add:(NSString *)input {
     NSInteger result = 0;
-    if (input.length) {
-        result = input.integerValue;
+    NSRange bound = [input rangeOfString:@","];
+    
+    if (!input.length) {
+        return 0;
+    }else if (bound.length==0){
+        return input.integerValue;
     }
+    
+    NSString *firstNum = [input substringWithRange:NSMakeRange(0, bound.location)];
+    NSString *secondNum = [input substringWithRange:NSMakeRange(bound.location+bound.length,input.length-(bound.length+bound.location))];
+    NSLog(@"first %@ second %@",firstNum,secondNum);
+    result = firstNum.integerValue+secondNum.integerValue;
+    
     return result;
 }
 
