@@ -46,7 +46,7 @@ describe(@"StringCalculator test", ^{
         
         it(@"test voi string truyen vao la 1 so co 2 chu so", ^{
             // given
-            string = @"58";
+            string = @"5,8";
             	
             // when
             NSInteger val =  [sut add:string];
