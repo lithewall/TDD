@@ -1,0 +1,4 @@
+platform :ios, '7.0'
+target :Kata1_1411Tests, :exclusive => true do
+  pod 'Kiwi/XCTest'
+end
