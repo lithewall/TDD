@@ -12,11 +12,15 @@ K1-1.4 red
 
 @implementation StringCalculator
 
--(NSNumberFormatter*)formatter{
-    if (!formatter) {
-        formatter = [[NSNumberFormatter alloc] init];
+-(id)init{
+    if (!self) {
+        self = [super init];
     }
-    return formatter;
+    if (self) {
+        listNumber = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
 }
 
 - (NSInteger)add:(NSString *)input {
@@ -32,25 +36,58 @@ K1-1.4 red
     NSString *firstNum = [input substringWithRange:NSMakeRange(0, bound.location)];
     NSString *secondNum = [input substringWithRange:NSMakeRange(bound.location+bound.length,input.length-(bound.length+bound.location))];
 
-    if (![self isNumberOfString:firstNum]||![self isNumberOfString:secondNum]) {
-        NSLog(@"Input error");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"TDD Add function"
-                                                        message:@"input error"
-                                                       delegate:Nil
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
+    if (![self parseString:secondNum]||![self parseString:firstNum]) {
         return 0;
     }
     
-    result = firstNum.integerValue+secondNum.integerValue;
+    //start test
+    for (NSString *str in listNumber) {
+        NSLog(@"value = %@",str);
+    }
+    return 0;
+    //end test
+    
+    for (NSString *currentString in listNumber) {
+        if (![currentString isNumber]) {
+            return 0 ;
+        }else{
+            result += currentString.integerValue;
+        }
+    }
     
     return result;
 }
 
--(BOOL)isNumberOfString:(NSString*)string{
-    NSNumber *number = [self.formatter numberFromString:string];
-    return number?YES:NO;
+-(BOOL)parseString:(NSString*)string{
+    NSLog(@"parse %@",string);
+    if ([string isEqualToString:@"\n"]) {
+        return NO;
+    }
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:
+                                  @"\n" options: 0 error:nil];
+    NSArray *results = [regex matchesInString:string
+                                      options:0
+                                        range:NSMakeRange(0, [string length])];
+    
+    NSRange range1,range2;
+    range1 = NSMakeRange(0, 0);
+    for (int i=0;i<=[results count];i++)
+    {
+        if (i<[results count]) {
+            range2 = ((NSTextCheckingResult *)[results objectAtIndex:i]).range;
+        }else{
+            range2 = NSMakeRange(string.length, 0);
+        }
+        
+        NSInteger length = range2.location-range1.location;
+        NSLog(@"get at %d %d",range1.location+range1.length,range2.location-range1.location);
+        if (length) {
+            [listNumber addObject:[string substringWithRange:NSMakeRange(range1.location+range1.length, range2.location-range1.location)]];
+        }
+        
+        range1 = range2;
+    }
+    return YES;
 }
-
 @end

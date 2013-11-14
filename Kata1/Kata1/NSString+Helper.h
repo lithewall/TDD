@@ -1,5 +1,5 @@
 //
-//  StringCalculator.h
+//  NSString+Helper.h
 //  Kata1
 //
 //  Created by Hoang Manh Truong on 11/13/13.
@@ -7,12 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSString+Helper.h"
 
-@interface StringCalculator : NSObject{
-    NSMutableArray *listNumber;
-}
-
-- (NSInteger)add:(NSString *)input;
-
+@interface NSString (Helper)
++(NSNumberFormatter*)formatter;
+-(BOOL)isNumber;
 @end

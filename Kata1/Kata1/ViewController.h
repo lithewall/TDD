@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSString+Helper.h"
 
 @interface ViewController : UIViewController
 
