@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E4CA927B-E34B-4A78-AD31-552157045ABB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Kata1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F61C37A8-9826-45E5-93D0-C8C128CD647D</key>
+		<string>https://github.com/lithewall/TDD.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Kata1/Kata1.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F61C37A8-9826-45E5-93D0-C8C128CD647D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lithewall/TDD.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F61C37A8-9826-45E5-93D0-C8C128CD647D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F61C37A8-9826-45E5-93D0-C8C128CD647D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TDD</string>
+		</dict>
+	</array>
+</dict>
+</plist>
