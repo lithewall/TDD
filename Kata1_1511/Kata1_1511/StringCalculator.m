@@ -13,6 +13,10 @@
 -(NSInteger)add:(NSString*)input{
     NSInteger rel = 0;
     
+    if (!input.length) {
+        return 0;
+    }
+    
     return 1;
 }
 
