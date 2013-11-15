@@ -32,4 +32,12 @@
     return rel;
 }
 
+-(BOOL)sortNumberFromString:(NSString*)str{
+    if ([str isEqualToString:@"\n"]) {
+        return NO;
+    }
+    
+    
+    return YES;
+}
 @end
