@@ -23,6 +23,7 @@
 		1BA0946C1835FAA700B54E18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BA0946A1835FAA700B54E18 /* InfoPlist.strings */; };
 		1BA094781835FB8D00B54E18 /* StringCalculatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA094771835FB8D00B54E18 /* StringCalculatorSpec.m */; };
 		1BA0947B1835FB9B00B54E18 /* StringCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA0947A1835FB9B00B54E18 /* StringCalculator.m */; };
+		1BA0947E1835FF9700B54E18 /* NSString+checkNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA0947D1835FF9700B54E18 /* NSString+checkNum.m */; };
 		7DFB0ABC4EA54483B20C1423 /* libPods-Kata1_1511Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBDFD49092F4BD280792390 /* libPods-Kata1_1511Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		1BA094771835FB8D00B54E18 /* StringCalculatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringCalculatorSpec.m; sourceTree = "<group>"; };
 		1BA094791835FB9B00B54E18 /* StringCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringCalculator.h; sourceTree = "<group>"; };
 		1BA0947A1835FB9B00B54E18 /* StringCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringCalculator.m; sourceTree = "<group>"; };
+		1BA0947C1835FF9700B54E18 /* NSString+checkNum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+checkNum.h"; sourceTree = "<group>"; };
+		1BA0947D1835FF9700B54E18 /* NSString+checkNum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+checkNum.m"; sourceTree = "<group>"; };
 		2BBDFD49092F4BD280792390 /* libPods-Kata1_1511Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kata1_1511Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FF032D5AEB74F65A37C0930 /* Pods-Kata1_1511Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kata1_1511Tests.xcconfig"; path = "Pods/Pods-Kata1_1511Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -133,6 +136,8 @@
 				1BA094461835FAA600B54E18 /* Supporting Files */,
 				1BA094791835FB9B00B54E18 /* StringCalculator.h */,
 				1BA0947A1835FB9B00B54E18 /* StringCalculator.m */,
+				1BA0947C1835FF9700B54E18 /* NSString+checkNum.h */,
+				1BA0947D1835FF9700B54E18 /* NSString+checkNum.m */,
 			);
 			path = Kata1_1511;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA0947E1835FF9700B54E18 /* NSString+checkNum.m in Sources */,
 				1BA094591835FAA600B54E18 /* ViewController.m in Sources */,
 				1BA094501835FAA600B54E18 /* AppDelegate.m in Sources */,
 				1BA0947B1835FB9B00B54E18 /* StringCalculator.m in Sources */,

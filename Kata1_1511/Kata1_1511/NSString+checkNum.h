@@ -1,5 +1,5 @@
 //
-//  StringCalculator.h
+//  NSString+checkNum.h
 //  Kata1_1511
 //
 //  Created by Hoang Manh Truong on 11/15/13.
@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSString+checkNum.h"
 
-@interface StringCalculator : NSObject
+@interface NSString (checkNum)
 
--(NSInteger)add:(NSString*)input;
+-(BOOL)isNum;
 
 @end
