@@ -37,5 +37,13 @@ describe(@"StringCalculator test", ^{
         [[theValue(outPut) should] equal:theValue(1)];
     });
     
+    it(@"Test with input 1,12", ^{
+        input = @"1,12";
+        
+        NSInteger outPut = [val add:input];
+        
+        [[theValue(outPut) should] equal:theValue(13)];
+    });
+    
 });
 SPEC_END

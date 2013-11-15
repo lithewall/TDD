@@ -17,6 +17,14 @@
         return 0;
     }
     
+    NSRange range = [input rangeOfString:@","];
+    
+    NSString *firstNum = [input substringWithRange:NSMakeRange(0, range.location+1)];
+    NSString *secondNum = [input substringWithRange:NSMakeRange(range.location+range.length,input.length - (range.location+range.length))];
+    
+    rel = firstNum.integerValue+secondNum.integerValue;
+    
+    
     
     return rel;
 }
