@@ -11,6 +11,8 @@
 @implementation StringCalculator
 
 -(NSInteger)add:(NSString*)input{
+    NSInteger rel = 0;
+    
     return 1;
 }
 
