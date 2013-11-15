@@ -22,7 +22,10 @@
     NSString *firstNum = [input substringWithRange:NSMakeRange(0, range.location)];
     NSString *secondNum = [input substringWithRange:NSMakeRange(range.location+range.length,input.length - (range.location+range.length))];
     
-    
+    if (![firstNum isNum]||![secondNum isNum]) {
+        NSLog(@"error number");
+        return 0;
+    }
     
     rel = firstNum.integerValue+secondNum.integerValue;
     
