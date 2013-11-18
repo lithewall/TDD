@@ -49,5 +49,13 @@ describe(@"StringCalculator test", ^{
         
         [[theValue(outPut) should] equal:theValue(0)];
     });
+    
+    it(@"Test voi input co ky tu xuong dong: 1\n2,3", ^{
+        input = @"1\n2,3";
+        
+        NSInteger outPut = [str add:input];
+        
+        [[theValue(outPut) should] equal:theValue(6)];
+    });
 });
 SPEC_END
