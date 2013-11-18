@@ -11,11 +11,11 @@ __block NSString *input;
 __block StringCalculator *str;
 describe(@"StringCalculator test", ^{
     afterAll(^{
-        str = [[StringCalculator alloc] init];
-    });
+        str = nil;
+            });
     
     beforeAll(^{
-        str = nil;
+        str = [[StringCalculator alloc] init];
     });
     
     it(@"Test voi ky tu rong", ^{

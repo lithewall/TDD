@@ -12,7 +12,17 @@
 
 -(NSInteger)add:(NSString*)str{
     NSInteger result;
-
+    
+    NSRange range = [str rangeOfString:@","];
+    
+    if (range.length == 0) {
+        return str.integerValue;
+    }
+    
+    NSString *firstStr = [str substringWithRange:NSMakeRange(0,range.location)];
+    NSString *secondStr = [str substringWithRange:NSMakeRange(range.location+1, str.length-range.length-range.location)];
+    
+    result = firstStr.integerValue+secondStr.integerValue;
     
     return result;
 }
