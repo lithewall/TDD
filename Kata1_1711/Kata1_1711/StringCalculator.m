@@ -7,6 +7,7 @@
 //
 
 #import "StringCalculator.h"
+#import "NSString+checkNum.h"
 
 @implementation StringCalculator
 
@@ -21,6 +22,8 @@
     
     NSString *firstStr = [str substringWithRange:NSMakeRange(0,range.location)];
     NSString *secondStr = [str substringWithRange:NSMakeRange(range.location+1, str.length-range.length-range.location)];
+    
+    
     
     result = firstStr.integerValue+secondStr.integerValue;
     

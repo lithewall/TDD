@@ -41,5 +41,13 @@ describe(@"StringCalculator test", ^{
         
         [[theValue(outPut) should] equal:theValue(15)];
     });
+    
+    it(@"Test voi input loi: 12as,3s", ^{
+        input = @"12as,3s";
+        
+        NSInteger outPut = [str add:input];
+        
+        [[theValue(outPut) should] equal:theValue(15)];
+    });
 });
 SPEC_END
