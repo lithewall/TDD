@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "NSString+checkNum.h"
 
-@interface StringCalculator : NSObject
+@interface StringCalculator : NSObject{
+    NSMutableArray *listNum;
+}
 
 -(NSInteger)add:(NSString*)input;
 
