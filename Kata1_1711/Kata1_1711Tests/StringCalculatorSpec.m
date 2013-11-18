@@ -47,7 +47,7 @@ describe(@"StringCalculator test", ^{
         
         NSInteger outPut = [str add:input];
         
-        [[theValue(outPut) should] equal:theValue(15)];
+        [[theValue(outPut) should] equal:theValue(0)];
     });
 });
 SPEC_END

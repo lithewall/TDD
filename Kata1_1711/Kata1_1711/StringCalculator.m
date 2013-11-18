@@ -23,7 +23,10 @@
     NSString *firstStr = [str substringWithRange:NSMakeRange(0,range.location)];
     NSString *secondStr = [str substringWithRange:NSMakeRange(range.location+1, str.length-range.length-range.location)];
     
-    
+    if (![firstStr isNum]||![secondStr isNum]) {
+        NSLog(@"zz %@ %@",firstStr,secondStr);
+        return 0;
+    }
     
     result = firstStr.integerValue+secondStr.integerValue;
     

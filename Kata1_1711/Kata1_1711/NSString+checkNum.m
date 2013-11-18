@@ -20,7 +20,7 @@ static NSNumberFormatter *formatter;
 }
 
 -(BOOL)isNum{
-    NSNumber *number = [formatter numberFromString:self];
+    NSNumber *number = [[NSString formatter] numberFromString:self];
     
     return number?YES:NO;
 }
