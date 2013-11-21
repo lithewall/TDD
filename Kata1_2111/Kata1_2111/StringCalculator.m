@@ -35,7 +35,7 @@
     }
 
     for (NSString *oneNum in listNum) {
-        NSInteger value = [oneNum integerValue];
+        NSInteger value = [oneNum integerValue]%1000;
        
         if (value< 0) {
             return 0;
