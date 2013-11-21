@@ -66,6 +66,15 @@ describe(@"StringCalculator test", ^{
         
         [[theValue(outPut) should] equal:theValue(3)];
     });
+    
+    it(@"Test with delimiter: //;\n1;2", ^{
+        input = @"//;\n1;2";
+        
+        NSInteger outPut = [str add:input];
+        
+        [[theValue(outPut) should] equal:theValue(3)];
+    });
+
 
 });
 SPEC_END

@@ -73,7 +73,7 @@ describe(@"StringCalculator test", ^{
 //        
 //        [[theValue(outPut) should] equal:theValue(3)];
 //    });
-//    
+//
 //    it(@"Test voi input co so am: //;\n-1;-2", ^{
 //        input = @"//;\n-1;-2";
 //        
