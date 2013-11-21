@@ -36,8 +36,11 @@
 
     for (NSString *oneNum in listNum) {
         NSInteger value = [oneNum integerValue];
+       
+        if (value< 0) {
+            return 0;
+        }
         
-               
         resuft += value;
     }
     
