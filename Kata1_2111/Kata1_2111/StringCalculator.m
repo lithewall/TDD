@@ -35,7 +35,10 @@
     }
 
     for (NSString *oneNum in listNum) {
-        resuft += oneNum.integerValue;
+        NSInteger value = [oneNum integerValue];
+        
+               
+        resuft += value;
     }
     
     return resuft;

@@ -75,6 +75,12 @@ describe(@"StringCalculator test", ^{
         [[theValue(outPut) should] equal:theValue(3)];
     });
 
-
+    it(@"Test with negative: //;\n-11;2", ^{
+        input = @"//;\n-11;2";
+        
+        NSInteger outPut = [str add:input];
+        
+        [[theValue(outPut) should] equal:theValue(0)];
+    });
 });
 SPEC_END
