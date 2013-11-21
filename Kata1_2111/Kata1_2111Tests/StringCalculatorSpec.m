@@ -58,6 +58,14 @@ describe(@"StringCalculator test", ^{
         
         [[theValue(outPut) should] equal:theValue(6)];
     });
+    
+    it(@"Test with input 1\n2,\n", ^{
+        input = @"1\n2,\n" ;
+        
+        NSInteger outPut = [str add: input];
+        
+        [[theValue(outPut) should] equal:theValue(3)];
+    });
 
 });
 SPEC_END
