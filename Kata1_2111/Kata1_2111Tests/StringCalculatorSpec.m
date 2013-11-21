@@ -42,5 +42,13 @@ describe(@"StringCalculator test", ^{
         
         [[theValue(outPut) should] equal:theValue(2)];
     });
+    
+    it(@"Test with input 221,112", ^{
+        input = @"221,112";
+        
+        NSInteger outPut = [str add: input];
+        
+        [[theValue(outPut) should] equal:theValue(333)];
+    });
 });
 SPEC_END
