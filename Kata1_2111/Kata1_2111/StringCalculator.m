@@ -48,7 +48,20 @@
 }
 
 -(NSString*)regexFromString:(NSString*)str{
-    return @";";
+    NSString *delimiter = @";";
+    
+    if ([[str substringToIndex:3] isEqualToString:@"//["]) {
+        NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"\n" options:0 error:nil];
+        NSArray *objects = [regex matchesInString:str options:0 range:NSMakeRange(2, str.length-2)];
+        if ([objects count]>0) {
+            NSRange range = ((NSTextCheckingResult*)[objects objectAtIndex:0]).range;
+            if ([[str substringWithRange:NSMakeRange(range.location-1,1)] isEqualToString:@"]"]) {
+                delimiter = [str substringWithRange:NSMakeRange(3, range.location-4)];
+            }
+        }
+    }
+
+    return delimiter;
 }
 
 -(NSMutableArray*)getTextNoHaveDelimiterFromStr:(NSString*)str{

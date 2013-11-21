@@ -96,7 +96,7 @@ describe(@"StringCalculator test", ^{
         
         NSInteger outPut = [str add:input];
         
-        [[theValue(outPut) should] equal:theValue(1)];
+        [[theValue(outPut) should] equal:theValue(6)];
     });
     
     
