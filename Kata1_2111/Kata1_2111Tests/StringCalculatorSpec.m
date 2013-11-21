@@ -82,5 +82,13 @@ describe(@"StringCalculator test", ^{
         
         [[theValue(outPut) should] equal:theValue(0)];
     });
+    
+    it(@"Test with number than 1000: //;\n1001;2000", ^{
+        input = @"//;\n1001;2000";
+        
+        NSInteger outPut = [str add:input];
+        
+        [[theValue(outPut) should] equal:theValue(1)];
+    });
 });
 SPEC_END

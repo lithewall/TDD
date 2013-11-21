@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kata1_2111/StringCalculator.m"
-            timestampString = "406721209.41153"
+            timestampString = "406721485.426364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "-add:"
             landmarkType = "5">
          </BreakpointContent>
