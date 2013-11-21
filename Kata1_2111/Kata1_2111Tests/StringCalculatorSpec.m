@@ -7,7 +7,40 @@
 #import "StringCalculator.h"
 
 SPEC_BEGIN(StringCalculatorSpec)
+
+__block  StringCalculator *str;
+__block  NSString *input;
+
+beforeAll(^{
+    str = [[StringCalculator alloc] init];
+});
+
+afterAll(^{
+    str = nil;
+});
 describe(@"StringCalculator test", ^{
+        it(@"Test with empty string", ^{
+            input = @"";
+            
+            NSInteger outPut = [str add: input];
+            
+            [[theValue(outPut) should] equal:theValue(0)];
+        });
+    
+    it(@"Test with in put 1", ^{
+        input = @"1";
         
+        NSInteger outPut = [str add: input];
+        
+        [[theValue(outPut) should] equal:theValue(1)];
+    });
+    
+    it(@"Test with input 1,1", ^{
+        input = @"1,1";
+        
+        NSInteger outPut = [str add: input];
+        
+        [[theValue(outPut) should] equal:theValue(2)];
+    });
 });
 SPEC_END

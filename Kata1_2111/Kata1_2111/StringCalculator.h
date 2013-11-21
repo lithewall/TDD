@@ -10,4 +10,6 @@
 
 @interface StringCalculator : NSObject
 
+-(NSInteger)add:(NSString*)str;
+
 @end

@@ -10,4 +10,10 @@
 
 @implementation StringCalculator
 
+-(NSInteger)add:(NSString*)str{
+    NSInteger resuft;
+    
+    return resuft;
+}
+
 @end
