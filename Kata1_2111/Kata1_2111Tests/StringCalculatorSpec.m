@@ -44,7 +44,7 @@ describe(@"StringCalculator test", ^{
     });
     
     it(@"Test with input 221,112", ^{
-        input = @"221,112";
+        input = @"221,112" ;
         
         NSInteger outPut = [str add: input];
         
