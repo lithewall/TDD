@@ -90,5 +90,15 @@ describe(@"StringCalculator test", ^{
         
         [[theValue(outPut) should] equal:theValue(1)];
     });
+    
+    it(@"Test with custom delimiter: //[***]\n1***2***3", ^{
+        input = @"//[***]\n1***2***3";
+        
+        NSInteger outPut = [str add:input];
+        
+        [[theValue(outPut) should] equal:theValue(1)];
+    });
+    
+    
 });
 SPEC_END
