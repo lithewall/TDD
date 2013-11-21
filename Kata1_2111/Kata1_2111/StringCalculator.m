@@ -32,13 +32,46 @@
         NSString *firstStr = [str substringWithRange:NSMakeRange(0,range.location)];
         NSString *secondStr = [str substringWithRange:NSMakeRange(range.location+1, str.length-range.length-range.location)];
         
-        [result addObject:firstStr];
-        [result addObject:secondStr];
+        NSArray *firstStrNum = [self sortString:firstStr byDelimiter:@"\n"];
+        NSArray *secondStrNum = [self sortString:secondStr byDelimiter:@"\n"];
+        
+        [result addObjectsFromArray:firstStrNum];
+        [result addObjectsFromArray:secondStrNum];
     }else{
-        [result addObject:str];
+        NSArray *strNum  = [self sortString:str byDelimiter:@"\n"];
+        
+        [result addObjectsFromArray:strNum];
+    }
+    return result;
+}
+
+-(NSArray*)sortString:(NSString*)str byDelimiter:(NSString*)delimiter{
+    NSMutableArray *resuft = [NSMutableArray array];
+    
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:delimiter options:NSRegularExpressionIgnoreMetacharacters error:nil];
+    NSArray *objects = [regex matchesInString:str options:0 range:NSMakeRange(0, str.length)];
+    
+    NSRange range1,range2;
+    range1 =  NSMakeRange(0, 0);
+    
+    for (int i=0; i<=[objects count]; i++) {
+        if (i<[objects count]) {
+            range2 = ((NSTextCheckingResult*)[objects objectAtIndex:i]).range;
+        }else{
+            range2 = NSMakeRange(str.length, 0);
+        }
+        
+        NSRange range = NSMakeRange(range1.location+range1.length, range2.location - (range1.location+range1.length));
+        NSString *subString = [str substringWithRange:range];
+        
+        NSLog(@"delimiter %@ of String %@ range %d %d, subString %@",delimiter,str,range.location,range.length,subString);
+        
+        [resuft addObject:subString];
+        
+        range1 = range2;
     }
     
-    return result;
+    return resuft;
 }
 
 @end

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kata1_2111/StringCalculator.m"
-            timestampString = "406719664.151362"
+            timestampString = "406720680.857739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-getTextNoHaveDelimiterFromStr:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kata1_2111/StringCalculator.m"
-            timestampString = "406719676.672055"
+            timestampString = "406720680.857739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-getTextNoHaveDelimiterFromStr:"
             landmarkType = "5">
          </BreakpointContent>
