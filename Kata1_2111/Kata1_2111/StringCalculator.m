@@ -14,13 +14,35 @@
     NSInteger resuft =0;
     NSMutableArray *listNum = [NSMutableArray array];
     
-    listNum = [self getTextNoHaveDelimiterFromStr:str];
     
+    if ([str hasPrefix:@"//"]) {
+        NSString *delimiter = [self regexFromString:str];;
+        
+        if ([delimiter isEqualToString:@";"]) {
+            str = [str substringWithRange:NSMakeRange(2, str.length-2)];
+        }else{
+            str = [str substringWithRange:NSMakeRange(delimiter.length+4, str.length-delimiter.length-4)];
+        }
+        NSLog(@"delimiter %@ str = %@",delimiter,str);
+        
+        NSArray *subStrings = [self sortString:str byDelimiter:delimiter];
+        
+        for (NSString *subString in subStrings) {
+            [listNum addObjectsFromArray:[self getTextNoHaveDelimiterFromStr:subString]];
+        }
+    }else{
+        [listNum addObjectsFromArray:[self getTextNoHaveDelimiterFromStr:str]];
+    }
+
     for (NSString *oneNum in listNum) {
         resuft += oneNum.integerValue;
     }
     
     return resuft;
+}
+
+-(NSString*)regexFromString:(NSString*)str{
+    return @";";
 }
 
 -(NSMutableArray*)getTextNoHaveDelimiterFromStr:(NSString*)str{
